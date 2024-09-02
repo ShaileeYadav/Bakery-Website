@@ -7,10 +7,10 @@ body {
 
 header.welcome-section {
     height: 100vh; /* Makes the welcome section cover the full viewport height */
-    background-image: url('bakery-background.jpg'); /* Replace with your image */
+    background-image: url('Untitled design (4).jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #050505;
     text-align: center;
     display: flex;
     flex-direction: column;
