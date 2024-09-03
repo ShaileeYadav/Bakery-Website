@@ -23,24 +23,56 @@
     <main>
         <section class="menu-section">
             <h2>Delicious Baked Goods</h2>
-            <div class="menu-item">
-                <h3>Chocolate Cake</h3>
-                <p>A rich, moist chocolate cake topped with creamy chocolate frosting.</p>
+            <form id="menu-form">
+                <div class="menu-item">
+                    <img src="chocolate_cake-removebg-preview.png" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>A rich, moist chocolate cake topped with creamy chocolate frosting.</p>
+                    <input type="checkbox" id="chocolate-cake" name="items" value="Chocolate Cake">
+                    <label for="chocolate-cake">Add to Cart</label>
+                </div>
+                <div class="menu-item">
+                    <img src="f930f15f384b8c2f409ba209fd17fbbf-removebg-preview.png" alt="Blueberry Muffin">
+                    <h3>Muffin</h3>
+                    <p>Freshly baked muffins with a variety of flavors.</p>
+                    <label for="muffin-flavor">Choose a flavor:</label>
+                    <select id="muffin-flavor" name="muffin-flavor">
+                        <option value="Blueberry">Blueberry</option>
+                        <option value="Chocolate Chip">Chocolate Chip</option>
+                        <option value="Banana Nut">Banana Nut</option>
+                        <option value="Lemon Poppy Seed">Lemon Poppy Seed</option>
+                    </select>
+                    <input type="checkbox" id="muffin" name="items" value="Muffin">
+                    <label for="muffin">Add to Cart</label>
+                </div>
+                <div class="menu-item">
+                    <img src="images-removebg-preview (1).png" alt="Sourdough Bread">
+                    <h3>Sourdough Bread</h3>
+                    <p>Classic sourdough bread with a crispy crust and soft interior.</p>
+                    <input type="checkbox" id="sourdough-bread" name="items" value="Sourdough Bread">
+                    <label for="sourdough-bread">Add to Cart</label>
+                </div>
+
+                <button type="button" onclick="addToCart()">Add to Cart</button>
+            </form>
+            <div id="cart-popup" class="cart-popup">
+                The items have been added to the cart.
             </div>
-            <div class="menu-item">
-                <h3>Blueberry Muffin</h3>
-                <p>Freshly baked muffin filled with juicy blueberries.</p>
-            </div>
-            <div class="menu-item">
-                <h3>Sourdough Bread</h3>
-                <p>Classic sourdough bread with a crispy crust and soft interior.</p>
-            </div>
-            <!-- Add more menu items as needed -->
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Bakery Delight. All rights reserved.</p>
     </footer>
+
+    <script>
+        function addToCart() {
+            const popup = document.getElementById('cart-popup');
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 10000);
+        }
+    </script>
 </body>
 </html>
